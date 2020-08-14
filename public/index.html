@@ -1,0 +1,21 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fiber Test</title>
+    <script>
+      const url = "http://localhost:3000/api";
+      async function send(method) {
+        const res = await fetch(url, { method });
+        const json = await res.json();
+        alert(json);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="send('post')">Send post</button>
+    <button onclick="send('POST')">Send POST</button>
+    <button onclick="send('patch')">Send patch</button>
+    <button onclick="send('PATCH')">Send PATCH</button>
+  </body>
+</html>
